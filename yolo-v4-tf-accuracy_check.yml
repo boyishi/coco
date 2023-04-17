@@ -25,8 +25,8 @@ models:
         annotation: \content\public\coco\annotations\mscoco_detection.pickle
         dataset_meta: \content\public\coco\coco_label_map.json
         preprocessing:
-        - type: resize
-          size: 608
+          - type: resize
+            size: 608
         postprocessing:
           - type: resize_prediction_boxes
           - type: filter
