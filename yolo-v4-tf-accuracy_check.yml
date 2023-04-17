@@ -24,6 +24,7 @@ models:
         data_source: /content/public/coco/val2017
         annotation: /content/public/coco/annotations/mscoco_detection.pickle
         dataset_meta: /content/public/coco/coco_label_map.json
+        subsample_size: 100
         preprocessing:
           - type: resize
             size: 608
