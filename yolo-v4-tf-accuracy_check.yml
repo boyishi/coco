@@ -21,9 +21,9 @@ models:
             - Func/StatefulPartitionedCall/output/_544:0      
     datasets:
       - name: coco  
-        data_source: C:\Users\boyis\Documents\yolo\yolov4\COCO\val2017
-        annotation:  C:\Users\boyis\Documents\yolo\yolov4\COCO\annotations\mscoco_detection.pickle
-        dataset_meta: C:\Users\boyis\Documents\yolo\yolov4\openvino\models\public\yolo-v4-tf\coco_label_map.json
+        data_source: \content\public\coco\val2017
+        annotation: \content\public\coco\annotations\mscoco_detection.pickle
+        dataset_meta: \content\public\coco\coco_label_map.json
         preprocessing:
         - type: resize
           size: 608
