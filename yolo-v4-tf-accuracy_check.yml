@@ -1,5 +1,5 @@
 models:
-  - name: yolo-vf-tf
+  - name: yolo-v4-tf
     launchers:
       - framework: openvino
         device: CPU
