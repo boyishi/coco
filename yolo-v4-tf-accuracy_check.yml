@@ -2,9 +2,6 @@ models:
   - name: yolo-v4-tf
     launchers:
       - framework: openvino
-        device: CPU
-        model: /content/public/yolo-v4-tf/FP32/yolo-v4-tf.xml
-        weights: /content/public/yolo-v4-tf/FP32/yolo-v4-tf.bin
         adapter:
           type: yolo_v3
           anchors: 12,16,19,36,40,28,36,75,76,55,72,146,142,110,192,243,459,401
@@ -16,14 +13,11 @@ models:
           raw_output: True
           output_format: HWB
           outputs:
-            - Func/StatefulPartitionedCall/output/_542:0
-            - Func/StatefulPartitionedCall/output/_543:0
-            - Func/StatefulPartitionedCall/output/_544:0      
+            - Func/StatefulPartitionedCall/output/_544
+            - Func/StatefulPartitionedCall/output/_542
+            - Func/StatefulPartitionedCall/output/_543
     datasets:
-      - name: coco  
-        data_source: /content/public/coco/val2017
-        annotation: /content/public/coco/annotations/mscoco_detection.pickle
-        dataset_meta: /content/public/coco/coco_label_map.json
+      - name: ms_coco_detection_80_class_without_background
         subsample_size: 100
         preprocessing:
           - type: resize
